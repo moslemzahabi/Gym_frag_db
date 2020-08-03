@@ -11,7 +11,6 @@
         android:id="@+id/satr"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -20,7 +19,7 @@
         android:layout_marginBottom="8dp"
         android:gravity="center"
         android:onClick="goTooDayliexersis"
-        android:tag="sat_exersis_prefrences"
+        android:tag="1"
         android:text="شنبه"
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
@@ -33,7 +32,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="goTooDayliexersis"
-        android:tag="sun_exersis_prefrences"
+        android:tag="2"
 
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -54,7 +53,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="goTooDayliexersis"
-        android:tag="mon_exersis_prefrences"
+        android:tag="3"
 
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -86,7 +85,7 @@
         android:textSize="16dp"
 
 
-        android:tag="tus_exersis_prefrences"
+        android:tag="4"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintHorizontal_bias="0.0"
@@ -98,7 +97,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="goTooDayliexersis"
-        android:tag="wen_exersis_prefrences"
+        android:tag="5"
 
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -119,7 +118,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="goTooDayliexersis"
-        android:tag="ter_exersis_prefrences"
+        android:tag="6"
 
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -136,7 +135,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/frir"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -148,6 +147,7 @@
         android:gravity="center"
         android:text="جمعه"
         android:textSize="16dp"
+        android:tag="7"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline"

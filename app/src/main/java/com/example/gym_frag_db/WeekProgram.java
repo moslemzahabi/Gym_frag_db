@@ -1,27 +1,28 @@
 package com.example.gym_frag_db;
 
 
+
 import android.content.Context;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.example.gym_frag_db.MainActivity.movments;
 
 
 public class WeekProgram extends Fragment implements View.OnClickListener {
 
 SendMessage SM;
 
- TextView saturday1,sunday1,monday1,tuesday1,wednesday1,thursday1,friday1,
+ TextView
+          saturday1,sunday1,monday1,tuesday1,wednesday1,thursday1,friday1,
           saturday2,sunday2,monday2,tuesday2,wednesday2,thursday2,friday2,
           saturday3,sunday3,monday3,tuesday3,wednesday3,thursday3,friday3;
 
@@ -31,14 +32,17 @@ List<Movment>list;
 
 
 
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(
-                R.layout.activity_program, container, false);
+                R.layout.fragment_program, container, false);
 
 
 
+        init(rootView);
 
 
         return rootView;
@@ -48,40 +52,8 @@ List<Movment>list;
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-
-
-        init(view);
-
-        list = new ArrayList<>();
-        setData();
         setTextView();
 
-
-//       Button previus =view.findViewById(R.id.previus);
-//       Button next    =view.findViewById(R.id.next   );
-
-
-
-
-
-
-
-
-
-//
-//        previus.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                SM.pages(-2);
-//            }
-//        });
-//        next.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                SM.data();
-//                SM.pages(2); }});
     }
 
 
@@ -93,9 +65,17 @@ List<Movment>list;
 
     private void init(View view) {
 
-        TextView satr=view.findViewById(R.id.satr);
-        satr.setOnClickListener(this);
+        view.findViewById(R.id.satr).setOnClickListener(this);
+        view.findViewById(R.id.sunr).setOnClickListener(this);
+        view.findViewById(R.id.monr).setOnClickListener(this);
+        view.findViewById(R.id.tusr).setOnClickListener(this);
+        view.findViewById(R.id.wenr).setOnClickListener(this);
+        view.findViewById(R.id.terr).setOnClickListener(this);
+        view.findViewById(R.id.frir).setOnClickListener(this);
 
+
+        list = new ArrayList<>();
+        list =movments();
 
         saturday1  =view.findViewById(R.id.saturday_textviw );
         saturday2  =view.findViewById(R.id.saturday_textviw2);
@@ -148,63 +128,20 @@ List<Movment>list;
 
 
     }
-    private void setData() {
-
-        myDatabaseHelper db = new myDatabaseHelper(getContext());
-
-
-//فراخوانی تابع Select
-        Cursor res = db.ShowallData();
-
-//بررسی خالی بودن جدول
-        if (res.getCount() == 0) {
-            Toast.makeText(getContext(), "جدول خالی بود", Toast.LENGTH_LONG).show();
-
-        }
-//ایجاد متغیر
-
-
-//گرفتن تمام داداه های داخل جدول
-        while (res.moveToNext()) {
-
-
-            int id    = Integer.valueOf(res.getString(0));
-            int day1  = Integer.valueOf(res.getString(1));
-            int day2  = Integer.valueOf(res.getString(2));
-            int day3  = Integer.valueOf(res.getString(3));
-            int day4  = Integer.valueOf(res.getString(4));
-            int day11 = Integer.valueOf(res.getString(5));
-            int day21 = Integer.valueOf(res.getString(6));
-            int day31 = Integer.valueOf(res.getString(7));
-            int day41 = Integer.valueOf(res.getString(8));
-            int day12 = Integer.valueOf(res.getString(9));
-            int day22 = Integer.valueOf(res.getString(10));
-            int day32 = Integer.valueOf(res.getString(11));
-            int day42 = Integer.valueOf(res.getString(12));
-            int day13 = Integer.valueOf(res.getString(13));
-            int day23 = Integer.valueOf(res.getString(14));
-            int day33 = Integer.valueOf(res.getString(15));
-            int day43 = Integer.valueOf(res.getString(16));
-
-
-            list.add(new Movment(id, day1 , day2 , day3 , day4 ,
-                                     day11, day21, day31, day41,
-                                     day12, day22, day32, day42,
-                                     day13, day23, day33, day43));
-        }
-    }
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(getContext(), v.getTag().toString(), Toast.LENGTH_SHORT).show();
-      SM.pages(2);
+
+
+        SM.pages(2,Integer.valueOf(v.getTag().toString()));
+
     }
 
 
     //............................................................interface..............
     interface SendMessage {
-        void pages(int Pag_number);
-        void data();
+       void pages(int Pag_number,int day);
+
     }
 
     @Override

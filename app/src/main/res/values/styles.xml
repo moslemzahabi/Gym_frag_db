@@ -7,18 +7,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="TextView1" parent="Theme.AppCompat.Light.DarkActionBar">
 
-    <style name="program_textview_styl">
-       <item name="android:layout_margin">8dp</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:textSize"></item>
-
-
-
-
-
-
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_margin">8dp</item>
 
     </style>
-
 </resources>

@@ -18,15 +18,15 @@ public class myDatabaseHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL(" CREATE TABLE " + TBL_NAME + "(Id INTEGER PRIMARY KEY AutoIncrement " +
-                ",day1 INTEGER,day11 INTEGER,day12 INTEGER,day13 INTEGER " +
-                ",day2 INTEGER,day21 INTEGER,day22 INTEGER,day23 INTEGER " +
-                ",day3 INTEGER,day31 INTEGER,day32 INTEGER,day33 INTEGER " +
-                ",day4 INTEGER,day41 INTEGER,day42 INTEGER,day43 INTEGER )");
 
+        public void onCreate(SQLiteDatabase db) {
+            db.execSQL(" CREATE TABLE " + TBL_NAME + "(Id INTEGER PRIMARY KEY AutoIncrement " +
+                    ",day1 INTEGER,day11 INTEGER,day12 INTEGER,day13 INTEGER,day14 INTEGER " +
+                    ",day2 INTEGER,day21 INTEGER,day22 INTEGER,day23 INTEGER,day24 INTEGER " +
+                    ",day3 INTEGER,day31 INTEGER,day32 INTEGER,day33 INTEGER,day34 INTEGER )");
 
-    }
+        }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db,int oldVersion, int newVersion) {
@@ -41,7 +41,7 @@ public class myDatabaseHelper extends SQLiteOpenHelper {
 
     //_________________________________________________________________________________________________
     //تابع اضافه کردن
-    public boolean insertData( )
+    public boolean insertData(int day)
    {
 
 //دیتابیس قابل نوشتن می شود
@@ -49,22 +49,25 @@ public class myDatabaseHelper extends SQLiteOpenHelper {
 
 //برای ایجاد جفت مقدار و شناسه ستون
        ContentValues cv=new ContentValues();
-       cv.put("day1" ,5);
-       cv.put("day2" ,5);
-       cv.put("day3" ,5);
-       cv.put("day4" ,5);
-       cv.put("day11",5);
-       cv.put("day21",5);
-       cv.put("day31",5);
-       cv.put("day41",5);
-       cv.put("day12",5);
-       cv.put("day22",5);
-       cv.put("day32",5);
-       cv.put("day42",5);
-       cv.put("day13",5);
-       cv.put("day23",5);
-       cv.put("day33",5);
-       cv.put("day43",5);
+
+
+       cv.put("day1" ,day);
+       cv.put("day11",day);
+       cv.put("day12",day);
+       cv.put("day13",day);
+       cv.put("day14",day);
+
+       cv.put("day2" ,day);
+       cv.put("day21",day);
+       cv.put("day22",day);
+       cv.put("day23",day);
+       cv.put("day24",day);
+
+       cv.put("day3" ,day);
+       cv.put("day31",day);
+       cv.put("day32",day);
+       cv.put("day33",day);
+       cv.put("day34",day);
 
 
 //وارد کردن اطلاعات به دیتابیس
@@ -98,32 +101,34 @@ public class myDatabaseHelper extends SQLiteOpenHelper {
 
 
     //تابع آپدیت
-    public boolean updateData(String txt,String txt1,String txt2,String txt3,String txt4){
+    public boolean updateData( int id,int day1,int day11,int day12,int day13,int day14,
+                                      int day2,int day21,int day22,int day23,int day24,
+                                      int day3,int day31,int day32,int day33,int day34){
 
 //اتصال به دیتابیس قابل نوشتن
         SQLiteDatabase db=this.getWritableDatabase();
 
 //برای ایجاد جفت مقدار و شناسه ستون
         ContentValues cv=new ContentValues();
-        cv.put("day1" ,0);
-        cv.put("day2" ,0);
-        cv.put("day3" ,0);
-        cv.put("day4" ,0);
-        cv.put("day11",0);
-        cv.put("day21",0);
-        cv.put("day31",0);
-        cv.put("day41",0);
-        cv.put("day12",0);
-        cv.put("day22",0);
-        cv.put("day32",0);
-        cv.put("day42",0);
-        cv.put("day13",0);
-        cv.put("day23",0);
-        cv.put("day33",0);
-        cv.put("day43",0);
+        cv.put("day1" ,day1 );
+        cv.put("day11",day11);
+        cv.put("day12",day12);
+        cv.put("day13",day13);
+        cv.put("day14",day14);
+        cv.put("day2" ,day2 );
+        cv.put("day21",day21);
+        cv.put("day22",day22);
+        cv.put("day23",day23);
+        cv.put("day24",day24);
+        cv.put("day3" ,day3 );
+        cv.put("day31",day31);
+        cv.put("day32",day32);
+        cv.put("day33",day33);
+        cv.put("day34",day34);
+
 
 //آپدیت اطلاعات دیتابیس
-        long result=db.update(TBL_NAME,cv,"Id=?",new String [] {"1"});
+        long result=db.update(TBL_NAME,cv,"Id=?",new String [] {String.valueOf(id)});
 
 //بررسی آپدیت اطلاعات
         if(result<1)

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="exersise">
+        <item> </item>
+        <item>پرس سینه</item>
+        <item>سرشانه</item>
+        <item>جلو بازو</item>
+        <item>پشت بازو</item>
+        <item>زیربغل</item>
+        <item>کول</item>
+    </string-array>
+
+    <string-array name="peres">
+        <item> پرس 1</item>
+        <item> پرس 2</item>
+        <item> پرس 3</item>
+        <item> پرس 4</item>
+        <item> پرس 5</item>
+    </string-array>
+
+    <string-array name="sarshaneh">
+        <item> سرشانه 1</item>
+        <item> سرشانه 2</item>
+        <item> سرشانه 3</item>
+        <item> سرشانه 4</item>
+        <item> سرشانه 5</item>
+    </string-array>
+    <string-array name="jelobazoo">
+        <item> جلوبازو 1</item>
+        <item> جلوبازو 2</item>
+        <item> جلوبازو 3</item>
+        <item> جلوبازو 4</item>
+        <item> جلوبازو 5</item>
+    </string-array>
+    <string-array name="poshtbazoo">
+        <item> پشتبازو 1</item>
+        <item> پشتبازو 2</item>
+        <item> پشتبازو 3</item>
+        <item> پشتبازو 4</item>
+        <item> پشتبازو 5</item>
+    </string-array>
+    <string-array name="zirbaghal">
+        <item> زیربغل 1</item>
+        <item> زیربغل 2</item>
+        <item> زیربغل 3</item>
+        <item> زیربغل 4</item>
+        <item> زیربغل 5</item>
+    </string-array>
+    <string-array name="kool">
+        <item> کول 1</item>
+        <item> کول 2</item>
+        <item> کول 3</item>
+        <item> کول 4</item>
+        <item> کول 5</item>
+    </string-array>
+    <string-array name="noting">
+        <item></item>
+
+    </string-array>
+
+
+
+</resources>
