@@ -34,11 +34,6 @@ public class myDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-
-
-
-
-
     //_________________________________________________________________________________________________
     //تابع اضافه کردن
     public boolean insertData(int day)

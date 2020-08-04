@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,10 +29,6 @@ List<Movment>list;
 
 
 
-
-
-
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -42,7 +37,7 @@ List<Movment>list;
 
 
 
-        init(rootView);
+
 
 
         return rootView;
@@ -51,16 +46,10 @@ List<Movment>list;
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        init(view);
         setTextView();
 
     }
-
-
-
-
-
-
 
 
     private void init(View view) {
@@ -104,54 +93,63 @@ List<Movment>list;
     }
     private void setTextView() {
 
-     saturday1 .setText(String.valueOf(list.get(0).getDay1()));
-     saturday2 .setText(String.valueOf(list.get(0).getDay2()));
-     saturday3 .setText(String.valueOf(list.get(0).getDay3()));
-     sunday1   .setText(String.valueOf(list.get(1).getDay1()));
-     sunday2   .setText(String.valueOf(list.get(1).getDay2()));
-     sunday3   .setText(String.valueOf(list.get(1).getDay3()));
-     monday1   .setText(String.valueOf(list.get(2).getDay1()));
-     monday2   .setText(String.valueOf(list.get(2).getDay2()));
-     monday3   .setText(String.valueOf(list.get(2).getDay3()));
-     tuesday1  .setText(String.valueOf(list.get(3).getDay1()));
-     tuesday2  .setText(String.valueOf(list.get(3).getDay2()));
-     tuesday3  .setText(String.valueOf(list.get(3).getDay3()));
-     wednesday1.setText(String.valueOf(list.get(4).getDay1()));
-     wednesday2.setText(String.valueOf(list.get(4).getDay2()));
-     wednesday3.setText(String.valueOf(list.get(4).getDay3()));
-     thursday1 .setText(String.valueOf(list.get(5).getDay1()));
-     thursday2 .setText(String.valueOf(list.get(5).getDay2()));
-     thursday3 .setText(String.valueOf(list.get(5).getDay3()));
-     friday1   .setText(String.valueOf(list.get(6).getDay1()));
-     friday2   .setText(String.valueOf(list.get(6).getDay2()));
-     friday3   .setText(String.valueOf(list.get(6).getDay3()));
+     saturday1 .setText(IntToText(list.get(0).getDay1()));
+     saturday2 .setText(IntToText(list.get(0).getDay2()));
+     saturday3 .setText(IntToText(list.get(0).getDay3()));
+     sunday1   .setText(IntToText(list.get(1).getDay1()));
+     sunday2   .setText(IntToText(list.get(1).getDay2()));
+     sunday3   .setText(IntToText(list.get(1).getDay3()));
+     monday1   .setText(IntToText(list.get(2).getDay1()));
+     monday2   .setText(IntToText(list.get(2).getDay2()));
+     monday3   .setText(IntToText(list.get(2).getDay3()));
+     tuesday1  .setText(IntToText(list.get(3).getDay1()));
+     tuesday2  .setText(IntToText(list.get(3).getDay2()));
+     tuesday3  .setText(IntToText(list.get(3).getDay3()));
+     wednesday1.setText(IntToText(list.get(4).getDay1()));
+     wednesday2.setText(IntToText(list.get(4).getDay2()));
+     wednesday3.setText(IntToText(list.get(4).getDay3()));
+     thursday1 .setText(IntToText(list.get(5).getDay1()));
+     thursday2 .setText(IntToText(list.get(5).getDay2()));
+     thursday3 .setText(IntToText(list.get(5).getDay3()));
+     friday1   .setText(IntToText(list.get(6).getDay1()));
+     friday2   .setText(IntToText(list.get(6).getDay2()));
+     friday3   .setText(IntToText(list.get(6).getDay3()));
 
 
     }
-
     @Override
     public void onClick(View v) {
 
-
-        SM.pages(2,Integer.valueOf(v.getTag().toString()));
-
+        SM.pages(2);
+        SM.day_number(Integer.valueOf(v.getTag().toString()));
     }
+    private String IntToText(int mov){
+        String m="";
+        switch (mov){
+            case 1: m= "پرس سینه";break;
+            case 2: m= "سرشانه";break;
+            case 3: m= "جلو بازو";break;
+            case 4: m= "پشت بازو";break;
+            case 5: m= "زیربغل";break;
+            case 6: m= "کول";break;
+        }
+        return m;
+    }
+
+
 
 
     //............................................................interface..............
     interface SendMessage {
-       void pages(int Pag_number,int day);
-
+       void pages(int Pag_number);
+       void day_number( int daynumber);
     }
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
         try {
             SM = (SendMessage) getActivity();
         } catch (ClassCastException e) {
-
         }
     }
 //............................................................interface..............

@@ -6,21 +6,19 @@ import android.database.Cursor;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements WeekProgram.SendMessage
-        ,DailyProgram.SendMessage,SetProgramMovment.SendMessage{
+        ,DailyProgram.SendMessage,SetProgramMovment.SendMessage,MoveImage.SendMessage{
 
 FragmentManager fragmentManager;
     myDatabaseHelper db;
 static List<Movment>list;
 static int day;
-
+static  String movmentText;
 //.................................................................................................
 
 
@@ -51,8 +49,8 @@ static int day;
 
 //.........................................................fragment implement..............
     @Override
-    public void pages(int Pag_number,int dayd) {
-day=dayd;
+    public void pages(int Pag_number) {
+
 
 
         if(Pag_number==1){
@@ -64,6 +62,19 @@ day=dayd;
         if(Pag_number==3){
             fragmentManager.beginTransaction().replace(R.id.framelayout,new SetProgramMovment()).commit();
         }
+        if(Pag_number==4){
+            fragmentManager.beginTransaction().replace(R.id.framelayout,new MoveImage()).commit();
+        }
+    }
+
+    @Override
+    public void day_number(int daynumber) {
+        day=daynumber;
+    }
+
+    @Override
+    public void SetTextImage(String text) {
+       movmentText=text;
     }
 
     @Override
@@ -136,5 +147,5 @@ list.clear();
     public static List<Movment> movments(){
         return list;
     }
-
+    public static String MovmentImageText(){   return movmentText;}
 }

@@ -34,18 +34,6 @@ List<Movment>list;
             mov1_3,mov2_3,mov3_3,
             mov1_4,mov2_4,mov3_4;
 
-
-    String[] mov       ;
-    String[] peres     ;
-    String[] sarshaneh ;
-    String[] jelobazoo ;
-    String[] poshtbazoo;
-    String[] zirbaghal ;
-    String[] kool      ;
-    String[] noting    ;
-
-
-
     ArrayAdapter<String> adapter ;
     ArrayAdapter<String> adapter0;
     ArrayAdapter<String> adapter1;
@@ -105,19 +93,29 @@ setMove();
 
     private void setArray() {
 
-        mov=getResources().getStringArray(R.array.exersise)  ;
 
-        noting    =getResources().getStringArray(R.array. noting    )  ;
-        peres     =getResources().getStringArray(R.array. peres     )  ;
-        sarshaneh =getResources().getStringArray(R.array. sarshaneh )  ;
-        jelobazoo =getResources().getStringArray(R.array. jelobazoo )  ;
-        poshtbazoo=getResources().getStringArray(R.array. poshtbazoo)  ;
-        zirbaghal =getResources().getStringArray(R.array. zirbaghal )  ;
-        kool      =getResources().getStringArray(R.array. kool      )  ;
+
+
+
+
+
 
     }
 
     private void setmoveAdapter() {
+
+
+
+
+
+        String[]   mov       =getResources().getStringArray(R.array.exersise   )  ;
+        String[]   noting    =getResources().getStringArray(R.array. noting    )  ;
+        String[]   peres     =getResources().getStringArray(R.array. peres     )  ;
+        String[]   sarshaneh =getResources().getStringArray(R.array. sarshaneh )  ;
+        String[]   jelobazoo =getResources().getStringArray(R.array. jelobazoo )  ;
+        String[]   poshtbazoo=getResources().getStringArray(R.array. poshtbazoo)  ;
+        String[]   zirbaghal =getResources().getStringArray(R.array. zirbaghal )  ;
+        String[]   kool      =getResources().getStringArray(R.array. kool      )  ;
 
 //.............................................orgin mov........................................................
         adapter =new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_item,mov        );
@@ -302,8 +300,6 @@ final int day =DayNumber()-1;
             }
         });
 
-
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -324,22 +320,13 @@ final int day =DayNumber()-1;
             }
         },100);
 
-
-
-
-
-
     }
-
-
-
-
 
     @Override
     public void onClick(View view) {
 
 
-        if(view.getId()==R.id.bt_dailyProgram){  SM.pages(2,DayNumber());}
+        if(view.getId()==R.id.bt_dailyProgram){  SM.pages(2);}
         if(view.getId()==R.id.save)       {Save();SM.Reaction(1);}
 
 
@@ -347,15 +334,30 @@ final int day =DayNumber()-1;
 
     private void Save() {
         myDatabaseHelper db=new myDatabaseHelper(getContext());
-db.updateData(DayNumber(),
-            3,3,3,3,3,
-            3,3,3,3,3,
-            3,3,3,3,3);
+
+
+        int m1   = mov1  .getSelectedItemPosition();
+        int m11  = mov1_1.getSelectedItemPosition();
+        int m12  = mov1_2.getSelectedItemPosition();
+        int m13  = mov1_3.getSelectedItemPosition();
+        int m14  = mov1_4.getSelectedItemPosition();
+        int m2   = mov2  .getSelectedItemPosition();
+        int m21  = mov1_4.getSelectedItemPosition();
+        int m22  = mov2_1.getSelectedItemPosition();
+        int m23  = mov2_2.getSelectedItemPosition();
+        int m24  = mov2_3.getSelectedItemPosition();
+        int m3   = mov3  .getSelectedItemPosition();
+        int m31  = mov3_1.getSelectedItemPosition();
+        int m32  = mov3_2.getSelectedItemPosition();
+        int m33  = mov3_3.getSelectedItemPosition();
+        int m34  = mov3_4.getSelectedItemPosition();
+db.updateData(DayNumber(),m1,m11,m12,m13,m14, m2,m21,m22,m23,m24,  m3,m31,m32,m33,m34);
+
     }
 
     //............................................................interface..............
     interface SendMessage {
-        void pages(int Pag_number,int day);
+        void pages(int Pag_number);
         void Reaction(int cod);
     }
 
