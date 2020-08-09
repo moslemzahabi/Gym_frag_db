@@ -7,6 +7,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.example.gym_frag_db.model.Movment;
+import com.example.gym_frag_db.storage.PrefManager;
+import com.example.gym_frag_db.storage.myDatabaseHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +24,7 @@ FragmentManager fragmentManager;
 static List<Movment>list;
 static int day;
 static  String movmentText;
+static  String databasName;
 //.................................................................................................
 
 
@@ -28,11 +34,13 @@ static  String movmentText;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+databasName=GetDBName();
+
         list=new ArrayList<>();
-        db = new myDatabaseHelper(this);
+        db = new myDatabaseHelper(this,databasName);
 
 
-            bulddatabase();
+         bulddatabase();
             setData();
 
 
@@ -40,6 +48,14 @@ static  String movmentText;
         fragmentManager = getSupportFragmentManager();//Get Fragment Manager
         fragmentManager.beginTransaction().replace(R.id.framelayout, new WeekProgram()).commit();
 
+    }
+
+    public String GetDBName() {
+        String name="noname";
+        Bundle extras = getIntent().getExtras();
+        if (extras.containsKey("dbName")){
+            name=extras.getString("dbName");}
+        return name;
     }
 
 
@@ -84,18 +100,31 @@ static  String movmentText;
 
 
     private void bulddatabase() {
-        SliderPrefManager pref = new SliderPrefManager(this);
+                PrefManager pref = new PrefManager(this);
 
 
-        if (pref.startSlider()) {
+        if (pref.getTableName(getDbName())) {
 
 
             for (int i = 0; i < 7; i++) {
                 db.insertData(0);
-                pref.setStartSlider(false);
+                pref.setNewTableName(getDbName(),false);
             }
             Toast.makeText(this, "yesssss", Toast.LENGTH_SHORT).show();
-        }
+               }
+
+//        PrefManager pref = new PrefManager(this);
+//
+//
+//        if (pref.startSlider()) {
+//
+//
+//            for (int i = 0; i < 7; i++) {
+//                db.insertData(0);
+//                pref.setStartSlider(false);
+//            }
+//            Toast.makeText(this, "yesssss", Toast.LENGTH_SHORT).show();
+ //       }
     }
     private void setData() {
 
@@ -143,6 +172,10 @@ list.clear();
     }
     public static int DayNumber(){
         return day;
+    }
+    public static String getDbName(){
+
+     return databasName;
     }
     public static List<Movment> movments(){
         return list;

@@ -1,4 +1,4 @@
-package com.example.gym_frag_db;
+package com.example.gym_frag_db.model;
 
 public class Movment {
     private int id     ;

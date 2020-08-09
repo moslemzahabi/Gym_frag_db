@@ -14,10 +14,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 
+import com.example.gym_frag_db.model.Movment;
+import com.example.gym_frag_db.storage.myDatabaseHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.gym_frag_db.MainActivity.DayNumber;
+import static com.example.gym_frag_db.MainActivity.getDbName;
 import static com.example.gym_frag_db.MainActivity.movments;
 
 
@@ -333,7 +337,7 @@ final int day =DayNumber()-1;
     }
 
     private void Save() {
-        myDatabaseHelper db=new myDatabaseHelper(getContext());
+        myDatabaseHelper db=new myDatabaseHelper(getContext(),getDbName());
 
 
         int m1   = mov1  .getSelectedItemPosition();

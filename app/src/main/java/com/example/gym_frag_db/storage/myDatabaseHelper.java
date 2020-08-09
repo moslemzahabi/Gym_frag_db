@@ -1,4 +1,4 @@
-package com.example.gym_frag_db;
+package com.example.gym_frag_db.storage;
 
 
 
@@ -9,11 +9,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class myDatabaseHelper extends SQLiteOpenHelper {
-    public static final String DB_NAME ="gym.db" ;
+    private String Db_Name ;
     public static final String TBL_NAME="test" ;
 
-    public myDatabaseHelper( Context context) {
-        super(context, DB_NAME, null, 1);
+    public myDatabaseHelper( Context context,String Db_Name) {
+        super(context, Db_Name, null, 1);
 
     }
 
@@ -140,9 +140,6 @@ public class myDatabaseHelper extends SQLiteOpenHelper {
 
         return result;
     }
-
-
-
 
 
 }
