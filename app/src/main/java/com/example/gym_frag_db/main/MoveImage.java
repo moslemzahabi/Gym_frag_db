@@ -1,4 +1,4 @@
-package com.example.gym_frag_db;
+package com.example.gym_frag_db.main;
 
 
 import android.content.Context;
@@ -10,7 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
-import static com.example.gym_frag_db.MainActivity.MovmentImageText;
+import com.example.gym_frag_db.R;
+
+import static com.example.gym_frag_db.main.MainActivity.MovmentImageText;
 
 
 public class MoveImage extends Fragment implements View.OnLongClickListener {

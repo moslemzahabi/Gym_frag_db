@@ -1,4 +1,4 @@
-package com.example.gym_frag_db;
+package com.example.gym_frag_db.main;
 
 
 import android.content.Context;
@@ -14,15 +14,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 
+import com.example.gym_frag_db.R;
 import com.example.gym_frag_db.model.Movment;
 import com.example.gym_frag_db.storage.myDatabaseHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.gym_frag_db.MainActivity.DayNumber;
-import static com.example.gym_frag_db.MainActivity.getDbName;
-import static com.example.gym_frag_db.MainActivity.movments;
+import static com.example.gym_frag_db.main.MainActivity.DayNumber;
+import static com.example.gym_frag_db.main.MainActivity.getDbName;
+import static com.example.gym_frag_db.main.MainActivity.movments;
 
 
 public class SetProgramMovment extends Fragment implements View.OnClickListener {

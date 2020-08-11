@@ -1,4 +1,4 @@
-package com.example.gym_frag_db;
+package com.example.gym_frag_db.main;
 
 
 
@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.gym_frag_db.R;
 import com.example.gym_frag_db.model.Movment;
 import com.example.gym_frag_db.storage.PrefManager;
 import com.example.gym_frag_db.storage.myDatabaseHelper;
@@ -17,7 +18,7 @@ import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements WeekProgram.SendMessage
-        ,DailyProgram.SendMessage,SetProgramMovment.SendMessage,MoveImage.SendMessage{
+        , DailyProgram.SendMessage, SetProgramMovment.SendMessage, MoveImage.SendMessage{
 
 FragmentManager fragmentManager;
     myDatabaseHelper db;
@@ -50,13 +51,7 @@ databasName=GetDBName();
 
     }
 
-    public String GetDBName() {
-        String name="noname";
-        Bundle extras = getIntent().getExtras();
-        if (extras.containsKey("dbName")){
-            name=extras.getString("dbName");}
-        return name;
-    }
+
 
 
 //........................................................................
@@ -98,7 +93,13 @@ databasName=GetDBName();
     //.........................................................fragment implement..............
 
 
-
+    public String GetDBName() {
+        String name="noname";
+        Bundle extras = getIntent().getExtras();
+        if (extras.containsKey("dbName")){
+            name=extras.getString("dbName");}
+        return name;
+    }
     private void bulddatabase() {
                 PrefManager pref = new PrefManager(this);
 

@@ -1,4 +1,4 @@
-package com.example.gym_frag_db;
+package com.example.gym_frag_db.main;
 
 
 
@@ -11,12 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.gym_frag_db.R;
 import com.example.gym_frag_db.model.Movment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.gym_frag_db.MainActivity.movments;
+import static com.example.gym_frag_db.main.MainActivity.movments;
 
 
 public class WeekProgram extends Fragment implements View.OnClickListener {

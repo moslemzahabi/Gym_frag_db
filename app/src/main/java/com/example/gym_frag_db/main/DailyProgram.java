@@ -1,4 +1,4 @@
-package com.example.gym_frag_db;
+package com.example.gym_frag_db.main;
 
 
 import android.content.Context;
@@ -9,15 +9,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import android.widget.TextView;
 
+import com.example.gym_frag_db.R;
 import com.example.gym_frag_db.model.Movment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.gym_frag_db.MainActivity.DayNumber;
-import static com.example.gym_frag_db.MainActivity.movments;
+import static com.example.gym_frag_db.main.MainActivity.DayNumber;
+import static com.example.gym_frag_db.main.MainActivity.movments;
 
 
 public class DailyProgram extends Fragment implements View.OnClickListener {
@@ -53,14 +55,14 @@ List<Movment>list;
         super.onViewCreated(view, savedInstanceState);
 
 
-      initEditText(view);
+      initTextView(view);
       initButton(view);
       setTextView();
 
 
     }
 
-    private void initEditText(View view) {
+    private void initTextView(View view) {
 
 
         day      =view.findViewById(R.id.day     )  ;
@@ -106,7 +108,7 @@ List<Movment>list;
 
     private void setTextView() {
         int DAY=DayNumber();
-
+            day.setText(returnday(DAY));
         mov1   .setText(IntToText   (list.get(DAY-1).getDay1 ()))                             ;
         mov1_1 .setText(IntToTextSub(list.get(DAY-1).getDay1 (),list.get(DAY-1).getDay11()))  ;
         mov1_2 .setText(IntToTextSub(list.get(DAY-1).getDay1 (),list.get(DAY-1).getDay12()))  ;
@@ -162,6 +164,7 @@ SM.pages(4);
               case 2:  s= "پرس 3"; break;
               case 3:  s= "پرس 4"; break;
               case 4:  s= "پرس 5"; break;
+              case 5:  s= "پرس 6"; break;
           }
       }
         if (mov==2){
@@ -235,6 +238,25 @@ SM.pages(4);
         return m;
 
     }
+
+    private  String returnday(int Daynumber){
+    String a;
+    switch(Daynumber){
+        case 1 : a= "شنبه" ; break;
+        case 2 : a= "یکشنبه" ;break;
+        case 3 : a= "دوشنبه" ;break;
+        case 4 : a= "سه شنبه" ;break;
+        case 5 : a= "چهارشنبه" ;break;
+        case 6 : a= "پنجشنبه" ;break;
+        case 7 : a= "جمعه" ;break;
+        default: a= "00000";break;
+    }
+return a;
+}
+
+
+
+
 
 
     //............................................................interface..............
