@@ -12,8 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
-
+        app:layout_constraintGuide_percent="0.13" />
 
 
     <android.support.constraint.Guideline
@@ -21,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.53" />
+        app:layout_constraintGuide_percent="0.75" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline39"
@@ -51,10 +50,20 @@
         android:id="@+id/set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
+        android:layout_marginStart="8dp"
         android:layout_marginBottom="52dp"
         android:src="@drawable/add_file"
         app:layout_constraintBottom_toTopOf="@+id/guideline39"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/guideline38" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="لیست برنامه ها"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

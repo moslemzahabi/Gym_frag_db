@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="49dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            >
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.79" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.35" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.42" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.63" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.77" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.91" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.07" />
+
+            <Spinner
+                android:id="@+id/mov1"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت1"
+                app:layout_constraintBottom_toTopOf="@+id/gh4"
+                app:layout_constraintEnd_toStartOf="@+id/guideline42"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/gh2" />
+
+            <Spinner
+                android:id="@+id/mov1_1"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت11"
+                app:layout_constraintBottom_toTopOf="@+id/gh2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh1" />
+
+            <Spinner
+                android:id="@+id/mov1_2"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت12"
+                app:layout_constraintBottom_toTopOf="@+id/gh3"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh2" />
+
+            <Spinner
+                android:id="@+id/mov1_3"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت13"
+                app:layout_constraintBottom_toTopOf="@+id/gh4"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh3" />
+
+            <Spinner
+                android:id="@+id/mov1_5"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت14"
+                app:layout_constraintBottom_toTopOf="@+id/gh5"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh4" />
+
+            <Spinner
+                android:id="@+id/mov2"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت2"
+                app:layout_constraintBottom_toTopOf="@+id/gh8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline42"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/gh6" />
+
+            <Spinner
+                android:id="@+id/mov2_1"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="حرکت21"
+                app:layout_constraintBottom_toTopOf="@+id/gh6"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh5" />
+
+            <Spinner
+                android:id="@+id/mov2_2"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت22"
+                app:layout_constraintBottom_toTopOf="@+id/gh7"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh6" />
+
+            <Spinner
+                android:id="@+id/mov2_3"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت23"
+                app:layout_constraintBottom_toTopOf="@+id/gh8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh7" />
+
+            <Spinner
+                android:id="@+id/mov2_4"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت24"
+                app:layout_constraintBottom_toTopOf="@+id/gh9"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh8" />
+
+            <Spinner
+                android:id="@+id/mov3"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت3"
+                app:layout_constraintBottom_toTopOf="@+id/gh12"
+                app:layout_constraintEnd_toStartOf="@+id/guideline42"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/gh10" />
+
+            <Spinner
+                android:id="@+id/mov3_1"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت31"
+                app:layout_constraintBottom_toTopOf="@+id/gh10"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh9" />
+
+            <Spinner
+                android:id="@+id/mov3_2"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت32"
+                app:layout_constraintBottom_toTopOf="@+id/gh11"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh10" />
+
+            <Spinner
+                android:id="@+id/mov3_3"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت33"
+                app:layout_constraintBottom_toTopOf="@+id/gh12"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh11" />
+
+            <Spinner
+                android:id="@+id/mov3_4"
+                style="@style/TextView1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="حرکت34"
+                app:layout_constraintBottom_toTopOf="@+id/gh13"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toTopOf="@+id/gh12" />
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="شنبه"
+                app:layout_constraintBottom_toTopOf="@+id/gh1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline42"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/bt_dailyProgram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="dailyProgram"
+                app:layout_constraintEnd_toStartOf="@+id/guideline30"
+                app:layout_constraintHorizontal_bias="0.076"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="776dp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="@+id/gh13" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.24" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.14" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.21" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.28" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.84" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.7" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.49" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gh8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.56" />
+
+            <Spinner
+                android:id="@+id/num11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="num11"
+                app:layout_constraintBottom_toTopOf="@+id/gh2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline30"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="@+id/gh1" />
+
+            <Spinner
+                android:id="@+id/num112"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="num12"
+                app:layout_constraintBottom_toTopOf="@+id/gh3"
+                app:layout_constraintEnd_toStartOf="@+id/guideline30"
+                app:layout_constraintHorizontal_bias="0.581"
+                app:layout_constraintStart_toEndOf="@+id/mov1_2"
+                app:layout_constraintTop_toTopOf="@+id/gh2"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Spinner
+                android:id="@+id/num13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="num13"
+                app:layout_constraintBottom_toTopOf="@+id/gh4"
+                app:layout_constraintEnd_toStartOf="@+id/guideline30"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="@+id/gh3" />
+
+            <Spinner
+                android:id="@+id/num14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="num14"
+                app:layout_constraintBottom_toTopOf="@+id/gh5"
+                app:layout_constraintEnd_toStartOf="@+id/guideline30"
+                app:layout_constraintHorizontal_bias="0.581"
+                app:layout_constraintStart_toEndOf="@+id/mov1_5"
+                app:layout_constraintTop_toTopOf="@+id/gh4"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Spinner
+                android:id="@+id/num21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="num21"
+                app:layout_constraintBottom_toTopOf="@+id/gh6"
+                app:layout_constraintEnd_toStartOf="@+id/guideline30"
+                app:layout_constraintHorizontal_bias="0.581"
+                app:layout_constraintStart_toEndOf="@+id/mov2_1"
+                app:layout_constraintTop_toTopOf="@+id/gh5"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Spinner
+                android:id="@+id/num22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="num22"
+                app:layout_constraintBottom_toTopOf="@+id/gh7"
+                app:layout_constraintEnd_toStartOf="@+id/guideline30"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="@+id/gh6" />
+
+            <Spinner
+                android:id="@+id/num23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="num23"
+                app:layout_constraintBottom_toTopOf="@+id/gh8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.373"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="@+id/gh7"
+                app:layout_constraintVertical_bias="0.666" />
+
+            <Spinner
+                android:id="@+id/num24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="num24"
+                app:layout_constraintBottom_toTopOf="@+id/gh9"
+                app:layout_constraintEnd_toStartOf="@+id/guideline30"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="@+id/gh8" />
+
+            <Spinner
+                android:id="@+id/num31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="num31"
+                app:layout_constraintBottom_toTopOf="@+id/gh10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="@+id/gh9"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Spinner
+                android:id="@+id/num32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="num32"
+                app:layout_constraintBottom_toTopOf="@+id/gh11"
+                app:layout_constraintEnd_toStartOf="@+id/guideline30"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="@+id/gh10" />
+
+            <Spinner
+                android:id="@+id/num33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="num33"
+                app:layout_constraintBottom_toTopOf="@+id/gh12"
+                app:layout_constraintEnd_toStartOf="@+id/guideline30"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="@+id/gh11" />
+
+            <Spinner
+                android:id="@+id/num34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="num34"
+                app:layout_constraintBottom_toTopOf="@+id/gh13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="@+id/gh12"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <View
+               style="@style/View_Daily_p_h1"
+                app:layout_constraintBottom_toTopOf="@+id/gh5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></View>
+
+
+            <View
+                style="@style/View_Daily_p_h1"
+                app:layout_constraintBottom_toTopOf="@+id/gh9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></View>
+
+            <View
+                style="@style/View_Daily_p_h1"
+                app:layout_constraintBottom_toTopOf="@+id/gh1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></View>
+
+
+            <View
+                style="@style/View_Daily_p_h1"
+                app:layout_constraintBottom_toTopOf="@+id/gh13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></View>
+
+
+
+
+
+
+
+
+
+
+            <View
+                style="@style/View_Daily_p_h2"
+                app:layout_constraintBottom_toTopOf="@+id/gh2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"></View>
+
+            <View
+                style="@style/View_Daily_p_h2"
+                app:layout_constraintBottom_toTopOf="@+id/gh3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"></View>
+            <View
+                style="@style/View_Daily_p_h2"
+                app:layout_constraintBottom_toTopOf="@+id/gh4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"></View>
+            <View
+                style="@style/View_Daily_p_h2"
+                app:layout_constraintBottom_toTopOf="@+id/gh6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"></View>
+            <View
+                style="@style/View_Daily_p_h2"
+                app:layout_constraintBottom_toTopOf="@+id/gh7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"></View>
+            <View
+                style="@style/View_Daily_p_h2"
+                app:layout_constraintBottom_toTopOf="@+id/gh8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"></View>
+            <View
+                style="@style/View_Daily_p_h2"
+                app:layout_constraintBottom_toTopOf="@+id/gh10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"></View>
+            <View
+                style="@style/View_Daily_p_h2"
+                app:layout_constraintBottom_toTopOf="@+id/gh11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"></View>
+            <View
+                style="@style/View_Daily_p_h2"
+                app:layout_constraintBottom_toTopOf="@+id/gh12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"></View>
+
+
+
+
+
+
+
+
+
+            <View
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+
+            android:background="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/gh13"
+            app:layout_constraintEnd_toStartOf="@+id/guideline42"
+            app:layout_constraintTop_toTopOf="@+id/gh1"></View>
+
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                android:background="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/gh13"
+                app:layout_constraintTop_toTopOf="@+id/gh1"></View>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

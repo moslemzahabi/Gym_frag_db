@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F1B6B6">
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="13dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="55dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="107dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="152dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="188dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="236dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="283dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="374dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="332dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="421dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="461dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="509dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/glv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05352798" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/glv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50121653" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/glv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/glv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94160587" />
+
+    <TextView
+        android:id="@+id/mov3"
+        style="@style/TextView1"
+        android:text="حرکت سوم"
+        app:layout_constraintBottom_toTopOf="@+id/gl2"
+        app:layout_constraintEnd_toStartOf="@+id/glv4"
+        app:layout_constraintStart_toStartOf="@+id/glv1"
+        app:layout_constraintTop_toTopOf="@+id/gl1" />
+
+    <TextView
+        android:id="@+id/mov31"
+        style="@style/TextView1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="mov31"
+        app:layout_constraintBottom_toTopOf="@+id/gl3"
+        app:layout_constraintEnd_toStartOf="@+id/glv4"
+        app:layout_constraintStart_toStartOf="@+id/glv1"
+        app:layout_constraintTop_toTopOf="@+id/gl2" />
+
+    <TextView
+        android:id="@+id/mov32"
+        style="@style/TextView1"
+
+        android:text="mov32"
+        app:layout_constraintBottom_toTopOf="@+id/gl5"
+        app:layout_constraintEnd_toStartOf="@+id/glv4"
+        app:layout_constraintStart_toStartOf="@+id/glv1"
+        app:layout_constraintTop_toTopOf="@+id/gl4" />
+
+    <TextView
+        android:id="@+id/mov33"
+        style="@style/TextView1"
+
+        android:text="mov33"
+        app:layout_constraintBottom_toTopOf="@+id/gl7"
+        app:layout_constraintEnd_toStartOf="@+id/glv4"
+        app:layout_constraintStart_toStartOf="@+id/glv1"
+        app:layout_constraintTop_toTopOf="@+id/gl6" />
+
+    <TextView
+        android:id="@+id/mov34"
+        style="@style/TextView1"
+        android:text="mov34"
+        app:layout_constraintBottom_toTopOf="@+id/gl9"
+        app:layout_constraintEnd_toStartOf="@+id/glv4"
+        app:layout_constraintStart_toStartOf="@+id/glv1"
+        app:layout_constraintTop_toTopOf="@+id/gl8" />
+
+    <TextView
+        android:id="@+id/mov35"
+        style="@style/TextView1"
+        android:text="mov35"
+        app:layout_constraintBottom_toTopOf="@+id/gl11"
+        app:layout_constraintEnd_toStartOf="@+id/glv4"
+        app:layout_constraintStart_toStartOf="@+id/glv1"
+        app:layout_constraintTop_toTopOf="@+id/gl10" />
+
+    <TextView
+        android:id="@+id/set31"
+        style="@style/TextView1"
+        android:text="set31"
+        app:layout_constraintBottom_toTopOf="@+id/gl4"
+        app:layout_constraintEnd_toStartOf="@+id/glv2"
+        app:layout_constraintStart_toStartOf="@+id/glv1"
+        app:layout_constraintTop_toTopOf="@+id/gl3" />
+
+    <TextView
+        android:id="@+id/set32"
+        style="@style/TextView1"
+
+        android:text="set32"
+        app:layout_constraintBottom_toTopOf="@+id/gl6"
+        app:layout_constraintEnd_toStartOf="@+id/glv2"
+        app:layout_constraintStart_toStartOf="@+id/glv1"
+        app:layout_constraintTop_toTopOf="@+id/gl5" />
+
+    <TextView
+        android:id="@+id/set33"
+        style="@style/TextView1"
+
+        android:text="set33"
+        app:layout_constraintBottom_toTopOf="@+id/gl8"
+        app:layout_constraintEnd_toStartOf="@+id/glv2"
+        app:layout_constraintStart_toStartOf="@+id/glv1"
+        app:layout_constraintTop_toTopOf="@+id/gl7" />
+
+    <TextView
+        android:id="@+id/set34"
+        style="@style/TextView1"
+
+        android:text="set34"
+        app:layout_constraintBottom_toTopOf="@+id/gl10"
+        app:layout_constraintEnd_toStartOf="@+id/glv2"
+        app:layout_constraintStart_toStartOf="@+id/glv1"
+        app:layout_constraintTop_toTopOf="@+id/gl9" />
+
+    <TextView
+        android:id="@+id/set35"
+        style="@style/TextView1"
+
+
+        android:text="set35"
+        app:layout_constraintBottom_toTopOf="@+id/gl12"
+        app:layout_constraintEnd_toStartOf="@+id/glv2"
+        app:layout_constraintStart_toStartOf="@+id/glv1"
+        app:layout_constraintTop_toTopOf="@+id/gl11" />
+
+    <TextView
+        android:id="@+id/num131"
+        style="@style/TextView1"
+        android:text="num131"
+        app:layout_constraintBottom_toTopOf="@+id/gl4"
+        app:layout_constraintEnd_toStartOf="@+id/glv3"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/glv2"
+        app:layout_constraintTop_toTopOf="@+id/gl3"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/num132"
+        style="@style/TextView1"
+
+        android:text="num132"
+        app:layout_constraintBottom_toTopOf="@+id/gl6"
+        app:layout_constraintEnd_toStartOf="@+id/glv3"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/glv2"
+        app:layout_constraintTop_toTopOf="@+id/gl5"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/num133"
+        style="@style/TextView1"
+
+        android:text="num133"
+        app:layout_constraintBottom_toTopOf="@+id/gl8"
+        app:layout_constraintEnd_toStartOf="@+id/glv3"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/glv2"
+        app:layout_constraintTop_toTopOf="@+id/gl7"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/num134"
+        style="@style/TextView1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="num134"
+        app:layout_constraintBottom_toTopOf="@+id/gl10"
+        app:layout_constraintEnd_toStartOf="@+id/glv3"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/glv2"
+        app:layout_constraintTop_toTopOf="@+id/gl9"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/num135"
+        style="@style/TextView1"
+
+
+        android:text="num135"
+        app:layout_constraintBottom_toTopOf="@+id/gl12"
+        app:layout_constraintEnd_toStartOf="@+id/glv3"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/glv2"
+        app:layout_constraintTop_toTopOf="@+id/gl11"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/num231"
+        style="@style/TextView1"
+        android:text="num231"
+        app:layout_constraintBottom_toTopOf="@+id/gl4"
+        app:layout_constraintEnd_toStartOf="@+id/glv4"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/glv3"
+        app:layout_constraintTop_toTopOf="@+id/gl3" />
+
+    <TextView
+        android:id="@+id/num232"
+        style="@style/TextView1"
+        android:text="num232"
+        app:layout_constraintBottom_toTopOf="@+id/gl6"
+        app:layout_constraintEnd_toStartOf="@+id/glv4"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/glv3"
+        app:layout_constraintTop_toTopOf="@+id/gl5" />
+
+    <TextView
+        android:id="@+id/num233"
+        style="@style/TextView1"
+
+        android:text="num233"
+        app:layout_constraintBottom_toTopOf="@+id/gl8"
+        app:layout_constraintEnd_toStartOf="@+id/glv4"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/glv3"
+        app:layout_constraintTop_toTopOf="@+id/gl7" />
+
+    <TextView
+        android:id="@+id/num234"
+        style="@style/TextView1"
+
+        android:text="num234"
+        app:layout_constraintBottom_toTopOf="@+id/gl10"
+        app:layout_constraintEnd_toStartOf="@+id/glv4"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/glv3"
+        app:layout_constraintTop_toTopOf="@+id/gl9" />
+
+    <TextView
+        android:id="@+id/num235"
+        style="@style/TextView1"
+
+
+        android:text="num234"
+        app:layout_constraintBottom_toTopOf="@+id/gl12"
+        app:layout_constraintEnd_toStartOf="@+id/glv4"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/glv3"
+        app:layout_constraintTop_toTopOf="@+id/gl11" />
+
+    
+</android.support.constraint.ConstraintLayout>

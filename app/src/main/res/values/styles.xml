@@ -37,7 +37,19 @@
         <item name="android:textColor">#1da6ba</item>
     </style>
 
-
-
+<style name="View_Daily_p_h1">
+    <item name="android:background">#000</item>
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">3dp</item>
+    <item name="android:layout_marginStart">8dp</item>
+    <item name="android:layout_marginEnd">8dp</item>
+</style>
+    <style name="View_Daily_p_h2">
+        <item name="android:background">#1B34AA</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
 
 </resources>
